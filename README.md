@@ -72,7 +72,7 @@ Open: http://localhost:3000
 - Monorepo: Turborepo, pnpm workspaces
 - Tooling: Biome, Husky, lint‑staged
 - App: Next.js 16, React 19
-- UI: shadcn/ui, Radix UI, Tailwind CSS v4
+- UI: shadcn/ui, Radix UI, Tailwind CSS v4, DaisyUI
 - Language: TypeScript
 
 ---
