@@ -2,28 +2,24 @@
 
 import { UnoptimizedLazyImage } from "@repo/ui/components/lazy-image";
 import { ViewTransition } from "react";
-import { useRouter } from "@/i18n/routing";
+import { OptimizeLink } from "@/components/optimize-link";
 
 const Page = () => {
-  const router = useRouter();
   return (
     <ViewTransition>
       <div className="h-screen w-full max-w-4xl mx-auto py-4">
         <div className="h-full flex items-center justify-center">
-          <div
-            className="aspect-18/13 w-full cursor-zoom-out"
-            onClick={() => {
-              router.push("/");
-            }}
-          >
-            <ViewTransition name="image">
-              <UnoptimizedLazyImage
-                src="/asahi.webp"
-                alt="intro"
-                className="rounded-2xl overflow-hidden"
-                imgClassName="w-full h-full object-contain"
-              />
-            </ViewTransition>
+          <div className="aspect-18/13 w-full">
+            <OptimizeLink href="/" className="cursor-zoom-out">
+              <ViewTransition name="image">
+                <UnoptimizedLazyImage
+                  src="https://github.com/xxxijustwei/monorepo-starter/raw/main/apps/web/public/asahi.webp"
+                  alt="intro"
+                  className="w-full h-full rounded-2xl overflow-hidden "
+                  imgClassName="object-contain"
+                />
+              </ViewTransition>
+            </OptimizeLink>
           </div>
         </div>
       </div>
